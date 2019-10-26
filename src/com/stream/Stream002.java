@@ -31,7 +31,7 @@ public class Stream002 {
 
 
         System.out.println("===========사용자정의==========");
-        //reduce()를 사용해서 이름의 갯수가 가장 작은사람을 찾음 초기값과 컬렉션의 처음 값을 비교해서 반환, 그담값과 반환되값을 비교해서 반환...
+        //reduce()를 사용해서 이름의 length가 가장 작은사람을 찾음 초기값과 컬렉션의 처음 값을 비교해서 반환, 그담값과 반환되값을 비교해서 반환...
         System.out.println(sList.stream().map(s -> s.getName()).reduce("        ", (s1, s2)->{
            if(s1.getBytes().length <= s2.getBytes().length)return s1;
            else return s2;

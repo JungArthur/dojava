@@ -1,9 +1,6 @@
 package com.utils;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 
 public class StreamClass {
 
@@ -25,8 +22,15 @@ public class StreamClass {
         return streamClass;
     }
 
-    public void fileInputMethod(){
-        System.out.println("Singletone test");
+    public void fileInputMethod1(){
+        int i = -1;
+        try(FileInputStream fis = new FileInputStream("input.txt");){
+            while((i=fis.read()) != -1){
+                System.out.println((char)i);
+            }
+        }catch(IOException e){
+            e.printStackTrace();
+        }
     }
 
     public String consoleInputMethod(){
