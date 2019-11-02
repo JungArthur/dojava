@@ -15,4 +15,6 @@ public class Stream001 {
         System.out.println(sumVal);
         System.out.println(count);
     }
+
+
 }
